@@ -1,44 +1,44 @@
 package com.example.googlebook;
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.LoaderManager;
-import android.content.Context;
+//import android.app.LoaderManager;
+//import android.content.Context;
 import android.content.Intent;
-import android.content.Loader;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+//import android.content.Loader;
+//import android.net.ConnectivityManager;
+//import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.SearchView;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
-public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<BookInfo>> {
-    private BookAdapter adapterss;
-    public NetworkInfo network;
-    private ProgressBar pbar;
-    private  TextView t1;
-    public String URL_LINK;
-    public static final String GOOGLE_BOOK_URL="https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
+//import android.widget.ListView;
+//import android.widget.ProgressBar;
+//import android.widget.SearchView;
+//import android.widget.TextView;
+//import java.util.ArrayList;
+//import java.util.List;
+public class MainActivity extends AppCompatActivity /*implements LoaderManager.LoaderCallbacks<List<BookInfo>> */
+{
+    /* private BookAdapter adapterss;
+     public NetworkInfo network;
+     private ProgressBar pbar;
+     private  TextView t1;*/
+  //(please keep this)  public String URL_LINK;
+    public static final String GOOGLE_BOOK_URL = "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      //  setContentView(R.layout.activity_main);
         setContentView(R.layout.front);
-        SearchView search=(SearchView)findViewById(R.id.search_view_Id);
-        URL_LINK=search.toString();
-        Button button=(Button)findViewById(R.id.button_view_Id);
+       // SearchView search = (SearchView) findViewById(R.id.search_view_Id);
+      //  URL_LINK = search.toString();
+        Button button = (Button) findViewById(R.id.button_view_Id);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent ii=new Intent(,activity.class);
-               startActivity(ii);
+                Intent ii;
+                ii = new Intent(MainActivity.this,activity.class);
+                startActivity(ii);
             }
         });
-        t1=(TextView)findViewById(R.id.Empty_and_no_internet_view_Id);
+    /*    t1=(TextView)findViewById(R.id.Empty_and_no_internet_view_Id);
         pbar=(ProgressBar)findViewById(R.id.progress_bar_Id);
         ConnectivityManager cm=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         network=cm.getActiveNetworkInfo();
@@ -46,8 +46,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         ListView l1=(ListView)findViewById(R.id.list_view_Id);
         adapterss=new BookAdapter(this,new ArrayList<>());
         l1.setAdapter(adapterss);
-        l1.setEmptyView(t1);
+        l1.setEmptyView(t1);*/
     }
+    /*
     @Override
     public Loader<List<BookInfo>> onCreateLoader(int id, Bundle args) {
     if(network!=null&&network.isConnectedOrConnecting()) {
@@ -76,5 +77,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoaderReset(Loader<List<BookInfo>> loader) {
         adapterss.clear();
-    }
+    }*/
+
 }
