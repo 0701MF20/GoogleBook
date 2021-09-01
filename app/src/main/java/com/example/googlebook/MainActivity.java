@@ -6,12 +6,13 @@ import android.content.Intent;
 //import android.content.Loader;
 //import android.net.ConnectivityManager;
 //import android.net.NetworkInfo;
-import android.net.NetworkInfo;
+//import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+//import android.widget.ProgressBar;
+import android.widget.SearchView;
+//import android.widget.TextView;
 
 //import android.widget.ListView;
 //import android.widget.ProgressBar;
@@ -21,20 +22,23 @@ import android.widget.TextView;
 //import java.util.List;
 public class MainActivity extends AppCompatActivity /*implements LoaderManager.LoaderCallbacks<List<BookInfo>> */
 {
-
+//"https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU"
 
     /* private BookAdapter adapterss;
      public NetworkInfo network;
      private ProgressBar pbar;
      private TextView t1;*/
-  //(please keep this)  public String URL_LINK;
-    public static final String GOOGLE_BOOK_URL = "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
+  //(please keep this)
+    //
+   // public String URL_LINK;
+    public static String GOOGLE_BOOK_URL1=" ";
+    public static final String GOOGLE_BOOK_URL="https://www.googleapis.com/books/v1/volumes?q="+GOOGLE_BOOK_URL1+"&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.front);
-       // SearchView search = (SearchView) findViewById(R.id.search_view_Id);
-      //  URL_LINK = search.toString();
+       SearchView search=(SearchView)findViewById(R.id.search_view_Id);
+        GOOGLE_BOOK_URL1 = search.toString();
         Button button = (Button) findViewById(R.id.button_view_Id);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
