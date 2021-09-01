@@ -6,6 +6,7 @@ import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
     @Override
     public void onLoadFinished(Loader<List<BookInfo>> loader, List<BookInfo> data) {
+        pbar.setVisibility(View.GONE);
     adapterss.clear();
 
     if(data!=null&&!data.isEmpty())
