@@ -20,14 +20,14 @@ public class BookAdapter extends ArrayAdapter<BookInfo> {
         }
         BookInfo book=getItem(position);
         TextView t1=(TextView)listView.findViewById(R.id.titlebook);
-        TextView t2=(TextView)listView.findViewById(R.id.authorId);
-        TextView t3=(TextView)listView.findViewById(R.id.PageCountId);
-        TextView t4=(TextView)listView.findViewById(R.id.maturityratingId);
-        TextView t5=(TextView)listView.findViewById(R.id.LanguageID);
         t1.setText(book.getTitle());
+        TextView t2=(TextView)listView.findViewById(R.id.authorId);
         t2.setText(book.getAuthor());
+        TextView t3=(TextView)listView.findViewById(R.id.PageCountId);
         t3.setText(book.getpageCount());
+        TextView t4=(TextView)listView.findViewById(R.id.maturityratingId);
         t4.setText(book.getMaturityRating());
+        TextView t5=(TextView)listView.findViewById(R.id.LanguageID);
         t5.setText(book.getLanguage());
         return listView;
     }

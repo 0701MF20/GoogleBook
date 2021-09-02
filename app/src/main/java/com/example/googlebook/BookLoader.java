@@ -5,7 +5,8 @@ import java.net.URL;
 import java.util.List;
 public class BookLoader extends AsyncTaskLoader<List<BookInfo>> {
     private String mURls;
-    BookLoader(Context context,String url)
+    public List<BookInfo> ijt;
+   public BookLoader(Context context,String url)
     {
         super(context);
         mURls=url;
@@ -22,9 +23,8 @@ public class BookLoader extends AsyncTaskLoader<List<BookInfo>> {
             return null;
         }
         else {
-        return QueryUtils.fetchFromServer(linkk);
+            ijt=QueryUtils.fetchFromServer(linkk);
+        return ijt;
         }
     }
-
-
 }
