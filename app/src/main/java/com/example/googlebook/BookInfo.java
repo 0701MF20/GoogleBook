@@ -7,11 +7,11 @@ public class BookInfo {
     public int mpageCount;
     BookInfo(String Title,String Author,String MaturityRating,String Language,int pageCount)
     {
-        this.mTitle=Title;
-        this.mAuthor=Author;
-        this.mMaturityRating=MaturityRating;
-        this.mLanguage=Language;
-        this.mpageCount=pageCount;
+        mTitle=Title;
+       mAuthor=Author;
+        mMaturityRating=MaturityRating;
+        mLanguage=Language;
+        mpageCount=pageCount;
     }
    public String getTitle()
     {

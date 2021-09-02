@@ -34,7 +34,7 @@ public  class QueryUtils
     {
         List<BookInfo> infoes=new ArrayList<>();
             try {
-                JSONObject bookLearn=new JSONObject("arc");
+                JSONObject bookLearn=new JSONObject(arc);
                 JSONArray arrayBook=bookLearn.getJSONArray("items");
                for(int i=0;i<arrayBook.length();i++)
                {
@@ -42,19 +42,19 @@ public  class QueryUtils
                    JSONObject Ob2=Ob1.getJSONObject("volumeInfo");
                    String title=Ob2.getString("title");
                    JSONArray Ob3=Ob2.getJSONArray("authors");
-                   String auth="";
+                   StringBuilder auth= new StringBuilder();
                    for(int j=0;j<Ob3.length();j++)
                    {
                        if(j>0)
                        {
-                           auth=" And ";
+                           auth = new StringBuilder(" And ");
                        }
-                       auth=auth+Ob3.getString(j);
+                       auth.append(Ob3.getString(j));
                    }
                    String rating=Ob2.getString("maturityRating");
                    String languagee=Ob2.getString("language");
                    int counts=Ob2.getInt("pageCount");
-                 infoes.add(new BookInfo(title,auth,rating,languagee,counts));
+                 infoes.add(new BookInfo(title, auth.toString(),rating,languagee,counts));
                  return infoes;
                }
             } catch (JSONException e) {
