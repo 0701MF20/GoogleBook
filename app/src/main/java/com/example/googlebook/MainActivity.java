@@ -50,7 +50,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
     else
     {
-        t1.setText("NO INTERNET CONNECTION");return null;
+        t1.setText("NO INTERNET CONNECTION");
+        pbar.setVisibility(View.GONE);
+    return null;
     }
     }
     @Override
