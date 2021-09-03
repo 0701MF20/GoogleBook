@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".MainActivity">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"
         android:id="@+id/list_view_Id"
         />
     <TextView

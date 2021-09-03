@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActionBar bar=getActionBar();
-        bar.setDisplayHomeAsUpEnabled(true);
    //   String GOOGLE_BOOK_URL=GOOGLE_BOOK_URL1+Activity.s3+GOOGLE_BOOK_URL3;
         t1=(TextView)findViewById(R.id.Empty_and_no_internet_view_Id);
        pbar=(ProgressBar)findViewById(R.id.progress_bar_Id);

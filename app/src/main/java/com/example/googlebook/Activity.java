@@ -17,6 +17,7 @@ public class Activity extends AppCompatActivity {
         setContentView(R.layout.front);
         s1=(SearchView)findViewById(R.id.search_view_Id);
         Button b1=(Button)findViewById(R.id.button_view_Id);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
