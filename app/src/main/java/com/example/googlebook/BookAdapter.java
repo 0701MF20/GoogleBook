@@ -1,4 +1,5 @@
 package com.example.googlebook;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ public class BookAdapter extends ArrayAdapter<BookInfo> {
     {
         super(context,0,infoBook);
     }
+    @SuppressLint("DefaultLocale")
     @Override
     public View getView(int position,View convertView,ViewGroup parent) {
         View listView=convertView;
@@ -26,7 +28,8 @@ public class BookAdapter extends ArrayAdapter<BookInfo> {
         TextView t5=(TextView)listView.findViewById(R.id.LanguageID);
         t1.setText(book.getTitle());
          t2.setText(book.getAuthor());
-        t3.setText(book.getpageCount()+"");
+       //t3.setText(String.format("%d", book.getpageCount()));
+     //   t3.setText(book.mpublisher);
         t4.setText(book.getMaturityRating());
         t5.setText(book.getLanguage());
         return listView;

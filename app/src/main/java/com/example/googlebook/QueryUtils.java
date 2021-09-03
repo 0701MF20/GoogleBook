@@ -51,8 +51,9 @@ public final class QueryUtils {
                 }
                 String rating = Ob2.getString("maturityRating");
                 String languagee = Ob2.getString("language");
-                long counts = Ob2.getInt("pageCount");
-                infoes.add(new BookInfo(title, auth.toString(), rating, languagee, counts));
+              //  int counts = Ob2.getInt("pageCount");
+
+                infoes.add(new BookInfo(title, auth.toString(), rating, languagee/*, counts*/));
             }
         } catch (JSONException e) {
             Log.e("QueryUtils", "Parsing JSON-EXCEPTION", e);

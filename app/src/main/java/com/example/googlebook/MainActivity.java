@@ -23,11 +23,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public NetworkInfo network;
     private ProgressBar pbar;
     private  TextView t1;
-    public static final String GOOGLE_BOOK_URL="https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
+  // public static String GOOGLE_BOOK_URL;
+ //   public static final String GOOGLE_BOOK_URL="https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
+   // public static final String GOOGLE_BOOK_URL1="https://www.googleapis.com/books/v1/volumes?q=";
+   // public static final String GOOGLE_BOOK_URL3="&key=AIzaSyAajyzH3dKChxNRBw6gH2hQceeFEUTysgU";
+  //  public static final String GOOGLE_BOOK_URL=GOOGLE_BOOK_URL1+Activity.s3+GOOGLE_BOOK_URL3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+   //   String GOOGLE_BOOK_URL=GOOGLE_BOOK_URL1+Activity.s3+GOOGLE_BOOK_URL3;
         t1=(TextView)findViewById(R.id.Empty_and_no_internet_view_Id);
        pbar=(ProgressBar)findViewById(R.id.progress_bar_Id);
     ConnectivityManager cm=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<List<BookInfo>> onCreateLoader(int id, Bundle args) {
     if(network!=null&&network.isConnectedOrConnecting()) {
-        return new BookLoader(this, GOOGLE_BOOK_URL);
+        return new BookLoader(this,Activity.GOOGLE_BOOK_URL);
     }
     else
     {
