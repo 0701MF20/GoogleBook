@@ -8,8 +8,9 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:id="@+id/titlebook"
+
         android:layout_weight="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         />
     <LinearLayout
         android:layout_width="0dp"
@@ -21,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/authorId"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             />
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/maturityratingId"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             />
         <TextView
             android:layout_width="match_parent"

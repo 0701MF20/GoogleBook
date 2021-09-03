@@ -4,13 +4,13 @@ public class BookInfo {
     public String mAuthor;
     public String mMaturityRating;
     public String mLanguage;
-    public int mpageCount;
-    BookInfo(String Title,String Author,String MaturityRating,String Language,int pageCount)
+    public long mpageCount;
+    BookInfo(String Title,String Author,String MaturityRating,String Language,long pageCount)
     {
         mTitle=Title;
-       mAuthor=Author;
+        mAuthor=Author;
         mMaturityRating=MaturityRating;
-        mLanguage=Language;
+       mLanguage=Language;
         mpageCount=pageCount;
     }
    public String getTitle()
@@ -29,7 +29,7 @@ public class BookInfo {
     {
         return mLanguage;
     }
-    public int getpageCount()
+    public long getpageCount()
     {
         return mpageCount;
     }
